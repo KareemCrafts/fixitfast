@@ -221,9 +221,12 @@ html{scroll-behavior:smooth}
       <aside class="card" id="quote" aria-labelledby="qh">
         <h2 id="qh">Get matched with a pro</h2>
         <p>Takes 30 seconds. We will connect you with a local contractor.</p>
-        <form name="quote" method="POST" action="thanks.html" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="quote">
-          <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="1ba04515-a6fb-4343-8313-ed2379464e5c">
+          <input type="hidden" name="subject" value="New quote request - Fix It Fast Co.">
+          <input type="hidden" name="from_name" value="Fix It Fast Co. website">
+          <input type="hidden" name="redirect" value="https://kareemcrafts.github.io/fixitfast/thanks.html">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
           <label>Your name<input name="name" type="text" autocomplete="name" required></label>
           <div class="two">
             <label>Phone<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
@@ -320,4 +323,4 @@ html{scroll-behavior:smooth}
 })();
 </script>
 </body>
-</html> 
+</html>
