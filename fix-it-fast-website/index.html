@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Free quotes for roofing, windows, siding, plumbing, AC, electrical, painting and more. Fix It Fast Co. connects homeowners with local contractors.">
+<meta name="theme-color" content="#0F1B3A">
+<meta property="og:title" content="Fix It Fast Co.: any repair, fast quotes">
+<meta property="og:description" content="Tell us the job. A local contractor contacts you with a free quote.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230F1B3A'/%3E%3Cpath d='M10 50 L50 16 L90 50 M22 44 V84 H78 V44' fill='none' stroke='%23F4F6FA' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpolygon points='55,32 36,60 48,60 44,80 65,50 52,50' fill='%23EF4444'/%3E%3C/svg%3E">
+<title>Fix It Fast Co.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: full-bleed navy hero (logo, phone under it, headline, quote card), service grid, 3 steps, red contractor band, footer. */
+:root{
+  --bg:#F4F6FA;
+  --surface:#FFFFFF;
+  --ink:#10192E;
+  --muted:#4E5A73;
+  --line:#DCE1EC;
+  --accent:#D91F26;
+  --accent-ink:#FFFFFF;
+  --navy:#0F1B3A;
+  --navy-2:#16264F;
+  --on-navy:#F4F6FA;
+  --on-navy-muted:#B4BED6;
+  --navy-line:rgba(244,246,250,.16);
+  --tile-icon:#10192E;
+  --tile-icon-bg:#FBE4E5;
+  --display:'Barlow Condensed','Arial Narrow','Helvetica Neue',Arial,sans-serif;
+  --body:'Inter','Helvetica Neue',Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0A1226;
+    --surface:#121C38;
+    --ink:#F2F5FB;
+    --muted:#A9B4CD;
+    --line:#26345A;
+    --accent:#E23840;
+    --navy:#070E21;
+    --navy-2:#101B3A;
+    --tile-icon:#F2F5FB;
+    --tile-icon-bg:#3A1C28;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0A1226;
+  --surface:#121C38;
+  --ink:#F2F5FB;
+  --muted:#A9B4CD;
+  --line:#26345A;
+  --accent:#E23840;
+  --navy:#070E21;
+  --navy-2:#101B3A;
+  --tile-icon:#F2F5FB;
+  --tile-icon-bg:#3A1C28;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.in{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:.98;letter-spacing:.005em;margin:0;text-wrap:balance;font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:8px;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:17px;text-decoration:none;border:2px solid var(--accent);cursor:pointer;font-family:var(--body)}
+.btn:hover{filter:brightness(1.1)}
+.btn.line{background:transparent;color:inherit;border-color:currentColor;opacity:.92}
+.btn.line:hover{filter:none;opacity:1}
+
+/* hero */
+.hero{background:var(--navy);color:var(--on-navy);background-image:linear-gradient(135deg,transparent 0 62%,var(--navy-2) 62% 100%)}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;padding-block:28px 8px}
+.logo{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.mark{display:flex;align-items:center;gap:14px;text-decoration:none}
+.mark svg{width:64px;height:64px;flex:none}
+.word{display:flex;flex-direction:column;gap:6px}
+.word b{font-family:var(--display);font-size:42px;line-height:.9;letter-spacing:.01em;text-transform:uppercase}
+.word b i{font-style:normal;color:#F25058}
+.word span{font-size:13px;font-weight:600;letter-spacing:.42em;color:var(--on-navy-muted);padding-left:2px}
+.phone{display:flex;flex-direction:column;gap:2px;padding:12px 18px;border:1px solid var(--navy-line);border-radius:10px;background:rgba(244,246,250,.05)}
+.phone small{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--on-navy-muted)}
+.phone strong{font-family:var(--display);font-size:32px;letter-spacing:.04em;line-height:1;user-select:all}
+.phone em{font-style:normal;font-size:14px;color:var(--on-navy-muted)}
+.copyrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:6px}
+.copybtn{font:inherit;font-size:14px;font-weight:600;color:var(--on-navy);background:transparent;border:1px solid var(--navy-line);border-radius:6px;padding:6px 12px;cursor:pointer}
+.copybtn:hover{border-color:var(--on-navy)}
+.note{font-size:14px;color:var(--on-navy-muted);min-height:1.4em}
+.nav{display:flex;gap:22px;align-items:center;font-weight:500;font-size:16px;padding-top:6px}
+.nav a{text-decoration:none;color:var(--on-navy-muted)}
+.nav a:hover{color:var(--on-navy)}
+
+.heroGrid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:56px;align-items:center;padding-block:56px 80px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#F58A8F;margin:0 0 18px}
+.hero h1{font-size:clamp(54px,9vw,112px)}
+.hero h1 em{font-style:normal;color:#F25058}
+.lede{font-size:20px;color:var(--on-navy-muted);max-width:30em;margin:24px 0 32px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .btn.line{color:var(--on-navy)}
+.card{background:var(--surface);color:var(--ink);border-radius:16px;padding:28px;box-shadow:0 24px 60px rgba(0,0,0,.28);min-width:0}
+.card h2{font-size:34px;margin-bottom:6px}
+.card > p{margin:0 0 16px;color:var(--muted);font-size:16px}
+.card ol{margin:0;padding:0;list-style:none;display:grid;gap:12px;counter-reset:s}
+.card li{display:flex;gap:12px;counter-increment:s;font-size:16px}
+.card li::before{content:counter(s);flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.card .addr{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+.card .addr b{display:block;color:var(--ink);font-size:17px;font-weight:600;overflow-wrap:anywhere;user-select:all}
+
+/* services */
+section{padding-block:80px}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.head h2{font-size:clamp(40px,6vw,64px)}
+.head p{margin:0;color:var(--muted);max-width:26em;font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 20px;min-width:0;display:flex;flex-direction:column;gap:14px;border-top:4px solid var(--accent)}
+.ico{width:48px;height:48px;border-radius:10px;background:var(--tile-icon-bg);display:flex;align-items:center;justify-content:center}
+.ico svg{width:26px;height:26px;stroke:var(--tile-icon);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.tile h3{font-size:28px}
+.tile p{margin:0;color:var(--muted);font-size:15.5px}
+
+/* steps */
+.steps{background:var(--surface);border-block:1px solid var(--line)}
+.row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin:0;padding:0;list-style:none}
+.row li{min-width:0;border-left:4px solid var(--accent);padding-left:20px}
+.row h3{font-size:34px;margin-bottom:8px}
+.row p{margin:0;color:var(--muted)}
+
+/* contractors */
+.pro{background:var(--accent);color:#fff}
+.pro .in{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:40px;align-items:center}
+.pro .eyebrow{color:#FFE3E4}
+.pro h2{font-size:clamp(42px,6vw,72px)}
+.pro p{font-size:19px;margin:18px 0 0;max-width:32em;color:#FFF5F5}
+.pro .box{background:var(--navy);color:var(--on-navy);border-radius:14px;padding:26px;min-width:0}
+.pro .box b{display:block;font-family:var(--display);text-transform:uppercase;font-size:30px;line-height:1;margin-bottom:10px}
+.pro .box span{display:block;color:var(--on-navy-muted);font-size:16px}
+.pro .box .big{font-family:var(--display);font-size:34px;letter-spacing:.04em;color:var(--on-navy);margin-top:14px;user-select:all}
+
+footer{background:var(--navy);color:var(--on-navy-muted);padding-block:36px 56px;font-size:15px}
+footer .in{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer p{margin:0;max-width:40em}
+footer b{color:var(--on-navy);font-weight:600}
+
+@media (max-width:900px){
+  .heroGrid{grid-template-columns:minmax(0,1fr);gap:40px;padding-block:36px 56px}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .row{grid-template-columns:minmax(0,1fr);gap:28px}
+  .pro .in{grid-template-columns:minmax(0,1fr)}
+  .nav{display:none}
+  section{padding-block:56px}
+}
+@media (max-width:520px){
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .word b{font-size:36px}
+  .mark svg{width:56px;height:56px}
+  .phone strong{font-size:28px}
+}
+
+body{margin:0}
+html{scroll-behavior:smooth}
+.card form{display:grid;gap:12px}
+.card label{display:grid;gap:6px;font-size:14px;font-weight:600;color:var(--ink)}
+.card input:not([type=checkbox]),.card select,.card textarea{font:inherit;font-size:16px;font-weight:400;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:8px;padding:12px;width:100%;min-height:48px}
+.card textarea{min-height:84px;resize:vertical}
+.card input:focus,.card select:focus,.card textarea:focus{border-color:var(--accent);outline:none}
+.two{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:12px}
+.chk{display:flex!important;gap:10px;align-items:flex-start;font-weight:400!important;font-size:13px!important;color:var(--muted)!important;line-height:1.4}
+.chk input{width:20px;height:20px;margin-top:1px;flex:none;accent-color:var(--accent)}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.btn.full{width:100%;margin-top:4px}
+.callbtn{text-decoration:none;display:inline-block}
+@media (max-width:520px){.two{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<div class="hero" id="top">
+  <div class="in">
+    <div class="top">
+      <div class="logo">
+        <a class="mark" href="#top" aria-label="Fix It Fast Co. home">
+          <svg viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M10 50 L50 16 L90 50" fill="none" stroke="#F4F6FA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 44 V84 H78 V44" fill="none" stroke="#F4F6FA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="55,32 36,60 48,60 44,80 65,50 52,50" fill="#EF4444"/>
+          </svg>
+          <span class="word"><b>Fix It <i>Fast</i></b><span>CO.</span></span>
+        </a>
+        <div class="phone">
+          <small>Call us</small>
+          <strong id="ph">+1 (484) 481-3243</strong>
+          <em>Call or text for a free quote</em>
+          <div class="copyrow">
+            <a class="copybtn callbtn" href="tel:+14844813243">Call now</a>
+            <button class="copybtn" type="button" id="cp">Copy number</button>
+            <span class="note" id="cpn" role="status" aria-live="polite"></span>
+          </div>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#how">How it works</a>
+        <a href="#contractors">For contractors</a>
+      </nav>
+    </div>
+
+    <div class="heroGrid">
+      <div>
+        <p class="eyebrow">Home repair and home services</p>
+        <h1>Any repair. <em>Fast</em> quotes.</h1>
+        <p class="lede">Roof, windows, siding, plumbing, AC, electrical, paint and more. Tell us the job and a local contractor reaches out with a free quote. You never pay us.</p>
+        <div class="cta">
+          <a class="btn" href="#quote">Get a free quote</a>
+          <a class="btn line" href="#services">See services</a>
+        </div>
+      </div>
+
+      <aside class="card" id="quote" aria-labelledby="qh">
+        <h2 id="qh">Get your free quote</h2>
+        <p>Takes 30 seconds. A local contractor will contact you.</p>
+        <form name="quote" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="quote">
+          <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
+          <label>Your name<input name="name" type="text" autocomplete="name" required></label>
+          <div class="two">
+            <label>Phone<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required></label>
+            <label>Zip code<input name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="10" required></label>
+          </div>
+          <label>What do you need?
+            <select name="job" required>
+              <option value="">Choose a service</option>
+              <option>Roofing</option><option>Impact windows</option><option>Hardie siding</option>
+              <option>Soffit and fascia</option><option>Plumbing</option><option>AC and heating</option>
+              <option>Electrical</option><option>Painting</option><option>Flooring</option>
+              <option>Gutters</option><option>Doors and garage</option><option>General repair</option><option>Something else</option>
+            </select>
+          </label>
+          <label>Details (optional)<textarea name="details" rows="3" placeholder="Example: 3 windows on the north side"></textarea></label>
+          <label class="chk"><input type="checkbox" name="consent" required><span>I agree that Fix It Fast Co. and its contractor partners may call or text me about this request. Not required to buy anything.</span></label>
+          <button class="btn full" type="submit">Send my request</button>
+        </form>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="in">
+    <div class="head">
+      <h2>What we get quoted</h2>
+      <p>If your job is not listed, ask. We will tell you if we have someone for it.</p>
+    </div>
+    <div class="grid">
+      <div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12l9-8 9 8M6 10v10h12V10"/></svg></div><h3>Roofing</h3><p>Repairs, leaks, full replacements.</p></div>
+      <div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM12 4v16M4 12h16"/></svg></div><h3>Impact windows</h3><p>Hurricane-rated windows, measured and installed.</p></div>
+      <div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 5h18M3 10h18M3 15h18M3 20h18"/></svg></div><h3>Hardie siding</h3><p>Fiber cement siding built for sun, rain and storms.</p></div>
+      <div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 8l9-4 9 4M3 8v3h18V8M6 11v5M12 11v5M18 11v5"/></svg></div><h3>Soffit and fascia</h3><p>Repair or replace the trim along your roofline.</p></div>
+      <div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div><h3>Plumbing</h3><p>Leaks, drains, water heaters, fixtures.</p></div>
+      <div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M4.2 16.5l15.6-9"/></svg></div><h3>AC and heating</h3><p>Repair, tune-ups and new systems.</p></div>
+      <div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg></div><h3>Electrical</h3><p>Panels, outlets, lighting and rewiring.</p></div>
+      <div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M5 4h12v5H5zM17 6.5h2v5h-7v3M11 14.5v6"/></svg></div><h3>Painting</h3><p>Interior and exterior, done clean.</p></div>
+      <div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M3 15h18M9 3v6M15 9v6M9 15v6"/></svg></div><h3>Flooring</h3><p>Tile, wood, vinyl and laminate.</p></div>
+      <div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 7h18v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM18 12v5M18 20v.5"/></svg></div><h3>Gutters</h3><p>Install, repair and clean.</p></div>
+      <div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 3h12v18H6zM15 12v.01"/></svg></div><h3>Doors and garage</h3><p>Entry doors, sliders, garage doors.</p></div>
+      <div class="tile"><div class="ico"><svg viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0-5 5L3 18l3 3 6.5-6.5a4 4 0 0 0 5-5l-2.5 2.5-2.5-.5-.5-2.5z"/></svg></div><h3>General repair</h3><p>Drywall, trim, small fixes and more.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="how">
+  <div class="in">
+    <div class="head"><h2>How it works</h2><p>Free for homeowners. We connect you with an independent local contractor.</p></div>
+    <ol class="row">
+      <li><h3>1. Tell us the job</h3><p>Name, zip code and what you need done. A few words is enough.</p></li>
+      <li><h3>2. A pro contacts you</h3><p>We pass your request to a local contractor who does that kind of work.</p></li>
+      <li><h3>3. Get your quote</h3><p>Ask questions, compare if you like, and decide. No obligation.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="pro" id="contractors">
+  <div class="in">
+    <div>
+      <p class="eyebrow">For contractors</p>
+      <h2>Homeowners who already asked for a quote.</h2>
+      <p>We find people in your area who want work done. You pay only when a homeowner signs with you. If they do not sign, you owe nothing. Start with 3 homeowners.</p>
+    </div>
+    <div class="box">
+      <b>Talk to us</b>
+      <span>Call or message:</span>
+      <div class="big">+1 (484) 481-3243</div>
+      <span style="margin-top:12px">kareemtamer2512@gmail.com</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="in">
+    <p><b>Fix It Fast Co.</b> connects homeowners with independent local contractors. We are not a contractor and do not do the work ourselves.</p>
+    <p>+1 (484) 481-3243 · kareemtamer2512@gmail.com</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.getElementById('cp'), note = document.getElementById('cpn'), el = document.getElementById('ph');
+  btn.addEventListener('click', function(){
+    function sel(){
+      var r = document.createRange(); r.selectNodeContents(el);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      note.textContent = 'Selected. Press Ctrl+C or Cmd+C.';
+    }
+    try {
+      navigator.clipboard.writeText(el.textContent.trim()).then(function(){ note.textContent = 'Copied.'; }, sel);
+    } catch (e) { sel(); }
+  });
+})();
+</script>
+</body>
+</html>
